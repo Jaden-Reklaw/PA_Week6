@@ -17,9 +17,21 @@ console.log("Test!")
 
 //Global Variable
 const budget = 25000;
+const purchases = [];
 
 const addPurchase = () => {
 	console.log("addPurchase");
+	//Get User to input creating a new object
+	let newPurchase = {
+		name: $('#item').val(),
+		price: $('#price').val()
+	};
+	//Push the New Purchases into the array
+	purchases.push(newPurchase);
+	//empty the inputs
+	$('#item').val('');
+	$('#price').val('');
+	//calculate remaining budget
 }
 
 const readyNow = () => {
